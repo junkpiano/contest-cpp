@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 typedef long long ll;
@@ -10,15 +10,21 @@ typedef pair<int,int> pii;
 #define repstr(c,s) for(auto c: s)
 
 void solve() {
+    int L, R;
+    cin >> L >> R;
+
+    if(L==1&&R==0) println("Yes");
+    else if(L==0&&R==1) println("No");
+    else println("Invalid");
 }
 
 int main(){
     voila
 
 #ifndef ONLINE_JUDGE
-    // For getting input from input.txt file 
-    freopen("input.txt", "r", stdin);
-    // Printing the Output to output.txt file 
+    // For getting input from input.txt file
+    // freopen("input.txt", "r", stdin);
+    // Printing the Output to output.txt file
     // freopen("output.txt", "w", stdout);
 #endif
 

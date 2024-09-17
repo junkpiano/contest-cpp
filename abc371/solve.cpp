@@ -10,6 +10,29 @@ typedef pair<int,int> pii;
 #define repstr(c,s) for(auto c: s)
 
 void solve() {
+    char SAB,SAC,SBC;
+    cin>>SAB>>SAC>>SBC;
+    if(SAB == '>') {
+        if(SAC == '>') {
+            if(SBC == '>') {
+                println("B");
+            } else {
+                println("C");
+            }
+        } else {
+            println("A");
+        }
+    } else {
+        if(SAC == '>') {
+            println("A");
+        } else {
+            if(SBC == '>') {
+                println("C");
+            } else {
+                println("B");
+            }
+        }
+    }
 }
 
 int main(){

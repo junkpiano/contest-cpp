@@ -1,4 +1,6 @@
 AtCoder Solutions
 ====================
 
-I do AtCoder.
+A Beginner Programming Contestant
+
+- [atcoder](https://atcoder.jp/users/junkpiano)
