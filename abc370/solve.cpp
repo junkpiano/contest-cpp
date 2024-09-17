@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 typedef long long ll;
@@ -10,12 +11,26 @@ typedef pair<int,int> pii;
 #define repstr(c,s) for(auto c: s)
 
 void solve() {
-    int L, R;
-    cin >> L >> R;
+    string s, t;
+    cin>>s>>t;
+    vector<string> ans;
+    int n = s.size();
+    while(s!=t) {
+        string nxt(n,'z');
+        for(int i = 0; i < n; i++) {
+            if(s[i] != t[i]) {
+                string tmp = s;
+                tmp[i] = t[i];
+                nxt = min(nxt, tmp);
+            }
+        }
 
-    if(L==1&&R==0) println("Yes");
-    else if(L==0&&R==1) println("No");
-    else println("Invalid");
+        ans.push_back(nxt);
+        s = nxt;
+    }
+
+    cout<<ans.size()<<endl;
+    for(auto &e: ans) cout<<e<<endl;
 }
 
 int main(){
