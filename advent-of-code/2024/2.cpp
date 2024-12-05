@@ -74,6 +74,7 @@ int evaluate(const vector<int> &v)
 int main()
 {
   long long answer = 0;
+  bool part2 = true;
   while (1)
   {
     string s;
@@ -90,11 +91,16 @@ int main()
       continue;
     }
 
+    if (!part2)
+    {
+      continue;
+    }
+
     vector<int> cp1 = v;
     vector<int> cp2 = v;
     cp1.erase(cp1.begin() + stop_index);
     cp2.erase(cp2.begin() + stop_index - 1);
-    
+
     stop_index = evaluate(cp1);
     if (stop_index == -1)
     {
